@@ -4,13 +4,18 @@
   "description": "Default Cypress Tests",
   "main": "index.js",
   "scripts": {
-    "test": "npx cypress run --browser chrome" 
-    
+    "test": "npx cypress run --browser chrome",
+    "report": "npx allure serve --clean allure-results",
+    "report:generate": "npx allure generate --clean allure-results --output allure-report"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "allure-commandline": "^2.42.0",
     "cypress": "^15.1.0"
+  },
+  "devDependencies": {
+    "allure-cypress": "^3.9.0"
   }
 }
