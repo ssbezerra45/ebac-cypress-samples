@@ -12,9 +12,9 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-    - uses: actions/checkout@v6
+    - uses: actions/checkout@v4
     - name: Use Node.js 
-      uses: actions/setup-node@v6
+      uses: actions/setup-node@v4
       with:
         node-version: 22
         cache: 'npm'
@@ -27,8 +27,7 @@ jobs:
       run: npm run report:generate
 
     - name: Publicar relatorio no Gh Pages 
-      uses: peaceiris/actions-gh-pages@v6
+      uses: peaceiris/actions-gh-pages@v4
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: public  
-   
+        publish_dir: ./public
