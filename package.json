@@ -7,11 +7,10 @@
     "test": "npx cypress run --browser chrome",
     "report": "npx allure serve --clean allure-results",
     "report:generate": "npx allure generate --clean allure-results --output allure-report",
-    "scripts": {
     "cy:run": "cypress run",
     "prereport": "mkdir -p public",
     "report": "cypress-mochawesome-reporter" 
-}
+
   },
   "keywords": [],
   "author": "",
