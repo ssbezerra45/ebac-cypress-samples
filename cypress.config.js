@@ -6,6 +6,7 @@ module.exports = defineConfig({
     setupNodeEvents(on, config) {
       allureCypress(on, config, {
         resultsDir: "public",
+        resultsDir:"allure-results"
       });
       return config;
     },
